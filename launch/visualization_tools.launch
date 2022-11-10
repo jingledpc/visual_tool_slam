@@ -1,0 +1,10 @@
+<launch>
+    <param name="/use_sim_time" value="false" />
+    <node pkg="visualization_tools" type="integrate2map" name="integrate2map" output="screen">
+        <param name="afterMapTopic" type="string" value="aft_mapped_to_init_incremental"/>
+        <param name="integrateTopic" type="string" value="integrated_to_init"/>
+    </node>
+
+    <node pkg="visualization_tools" type="realTimePlot.py" name="realTimePlot" output="screen" respawn="true"/>
+
+</launch>
